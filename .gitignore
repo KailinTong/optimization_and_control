@@ -1,0 +1,12 @@
+# Simulink code generation folders
+slprj/
+sccprj/
+
+# Simulink autosave extension
+*.autosave
+
+# Simulink cache files
+*.slxc
+
+# yalmip installation folders
+matlab_yalmip/
