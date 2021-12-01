@@ -10,3 +10,13 @@ sccprj/
 
 # yalmip installation folders
 matlab_yalmip/
+
+# latex and tex things
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+*.vrb

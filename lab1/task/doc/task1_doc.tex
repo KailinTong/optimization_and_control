@@ -1,0 +1,57 @@
+\documentclass[a4paper, 12pt]{scrartcl} 
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+
+\usepackage{amsmath,amssymb,amstext}
+\usepackage{psfrag}
+\usepackage{float}
+\usepackage[automark]{scrlayer-scrpage}
+
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex]{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\pdfcompresslevel=9
+\usepackage[pdftex=true, backref, pagebackref=false, colorlinks=true, bookmarks=true, bookmarksopen=false, bookmarksnumbered=false, pdfpagemode=None]{hyperref}
+\DeclareGraphicsExtensions{.pdf}
+\fi
+
+\hypersetup{
+pdftitle={}, 
+pdfauthor={}, 
+pdfsubject={}, 
+pdfcreator={Accomplished with LaTeX2e and pdfLaTeX with hyperref-package.}, 
+pdfproducer={}, 
+pdfkeywords={} 
+}
+\newcommand{\mygraphics}[3]{
+\begin{center}
+\includegraphics[width=#1, keepaspectratio=true]{#2} \\
+\textbf{#3}
+\end{center}
+}
+\pagestyle{scrheadings}
+
+\begin{document}
+\section{Description Lab 1}
+
+\subsection{Task 1}
+\subsubsection{Subtask 1a}
+\subsubsection{Subtask 1b}
+\subsubsection{Subtask 1c}
+\subsubsection{Subtask 1d}
+
+\subsection{Task 2}
+\subsubsection{Subtask 1a}
+\subsubsection{Subtask 1b}
+\subsubsection{Subtask 1c}
+\subsubsection{Subtask 1d}
+\subsubsection{Subtask 1e}
+\subsubsection{Subtask 1f}
+
+\subsection{Task 3}
+
+\end{document}
