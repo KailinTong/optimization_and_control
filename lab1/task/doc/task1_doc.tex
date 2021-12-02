@@ -40,6 +40,26 @@ pdfkeywords={}
 
 \subsection{Task 1}
 \subsubsection{Subtask 1a}
+Insert $x_w = v_w = \frac{dv_w}{dt} = i_A = 0$ into equation 3 of the mathematical model. \\
+\begin{equation}
+	\frac{dv_w}{dt} = 0 = \frac{1}{m_w + m_s(1-\cos(\phi)^2)} (m_s l \omega^2 \sin(\phi) - m_s g \sin(\phi) \cos(\phi))
+\end{equation}
+\begin{equation}
+	m_s l \omega^2 \sin(\phi) = m_s g \sin(\phi) \cos(\phi)
+\end{equation}
+\begin{equation}
+	l \omega^2 = g \cos(\phi)
+\end{equation}
+Than change the fourth equation of the mathematical model to get the form $\dot{\omega}(t) = p_1 f1(\phi(t), \omega(t), \dot{\omega}(t))$.
+\begin{equation}
+	\frac{d\omega}{dt} = \frac{1}{l\left(1-\frac{m_s}{m_w + m_s} \cos(\phi)^2\right)} \left( g \sin(\phi) - \frac{m_s}{m_w + m_s} \underbrace{l \omega^2}_{g \cos(\phi)} \sin(\phi) \cos(\phi) \right)
+\end{equation}
+\begin{equation}
+	\frac{d\omega}{dt} = \frac{1}{l\left(1-\frac{m_s}{m_w + m_s} \cos(\phi)^2\right)} \left( g \sin(\phi) \left(1-\frac{m_s}{m_w + m_s} \cos(\phi)^2\right) \right)
+\end{equation}
+\begin{equation}
+	\frac{d\omega}{dt} = \frac{g}{l} \sin(\phi)
+\end{equation}
 \subsubsection{Subtask 1b}
 \subsubsection{Subtask 1c}
 \subsubsection{Subtask 1d}
