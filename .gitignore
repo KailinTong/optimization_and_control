@@ -11,6 +11,9 @@ sccprj/
 # yalmip installation folders
 matlab_yalmip/
 
+# matlab autosave
+*.asv
+
 # latex and tex things
 *.aux
 *.log
