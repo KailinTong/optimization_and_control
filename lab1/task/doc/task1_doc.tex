@@ -66,18 +66,41 @@ Than change the fourth equation of the mathematical model to get the form $\dot{
 
 \subsection{Task 2}
 \subsubsection{Subtask 1a}
+This is the 4th equation of the mathematical model:
 \begin{equation}
-	\begin{aligned}
-	\dot{\omega} - g\sin(\phi) 
-	&= \frac{1}{\left(1-\frac{m_s}{m_w + m_s} \cos(\phi)^2\right)} \left( g \sin(\phi) -  \frac{\cos(\phi)F}{m_w + m_s} - \frac{m_s}{m_w + m_s} {l \omega^2} \sin(\phi) \cos(\phi) \right) - g\sin(\phi)\\
-	&= \frac{1}{\left(1-\frac{m_s}{m_w + m_s} \cos(\phi)^2\right)} \left( -\frac{\cos(\phi)F}{m_w + m_s} - \frac{m_s}{m_w + m_s} {l \omega^2} \sin(\phi) \cos(\phi) +\frac{m_s}{m_w + m_s} g\cos(\phi)^2 \sin(\phi) \right)\\
-	&= \frac{m_w + m_s}{m_w+ m_s\sin(\phi)^2} \left( -\frac{\cos(\phi)F}{m_w + m_s} - \frac{m_s}{m_w + m_s} {l \omega^2} \sin(\phi) \cos(\phi) +\frac{m_s}{m_w + m_s} g\cos(\phi)^2 \sin(\phi) \right)\\
-	&= \frac{1}{m_w+ m_s\sin(\phi)^2} \left( -\cos(\phi)F - m_s {l \omega^2} \sin(\phi) \cos(\phi) +m_s g\cos(\phi)^2 \sin(\phi) \right)\\
-	\end{aligned}
+	\dot{\omega} = \frac{1}{l\left(1-\frac{m_s}{m_w + m_s} \cos(\phi)^2\right)} \left[ g \sin(\phi) -  \frac{\cos(\phi)F}{m_w + m_s} - \frac{m_s}{m_w + m_s} {l \omega^2} \sin(\phi) \cos(\phi) \right]
+\end{equation}
+By multiplying with the denominator we get: 
+\begin{equation}
+	\begin{split}
+		\dot{\omega}l \left(1-\frac{m_s}{m_w + m_s} \cos(\phi)^2\right) = & g \sin(\phi) -  \frac{\cos(\phi)F}{m_w + m_s} - \frac{m_s}{m_w + m_s} {l \omega^2} \sin(\phi) \cos(\phi) \\
+		\dot{\omega}l - g \sin(\phi) = & \frac{l m_s}{m_w + m_s} \dot{\omega} \cos(\phi)^2 - \frac{V}{m_w + m_s} \cos(\phi) i_A - \\
+		& \frac{k_1}{m_w + m_s} \cos(\phi) v_w - \frac{l m_s}{m_w + m_s} \omega^2 \sin(\phi) \cos(\phi) \\
+		\dot{\omega}l - g \sin(\phi) = & \frac{l m_s}{m_w + m_s} \left( \dot{\omega} \cos(\phi)^2 - \omega^2 \sin(\phi) \cos(\phi) \right) \\ 
+		& - \frac{V}{m_w + m_s} \cos(\phi) i_A - \frac{k_1}{m_w + m_s} \cos(\phi) v_w \\
+	\end{split}
+\end{equation}
+The 3 additive functions with its constant prefactors are: 
+\begin{equation}
+	p_1 = \frac{l m_s}{m_w + m_s} \text{ ; } f_1(\dot{\omega}, \phi, \omega) = \dot{\omega} \cos(\phi)^2 - \omega^2 \sin(\phi) \cos(\phi)
+\end{equation}
+\begin{equation}
+	p_2 = \frac{V}{m_w + m_s}  \text{ ; } f_2(\phi, i_A) = \cos(\phi) i_A
+\end{equation}
+\begin{equation}
+	p_3 = \frac{k_1}{m_w + m_s} \text{ ; } f_3(\phi, v_w) = \cos(\phi) v_w
 \end{equation}
 
 \subsubsection{Subtask 1b}
 \subsubsection{Subtask 1c}
+\begin{equation}
+	\begin{split}
+		p_1 = & \frac{l m_s}{m_w + m_s} \\
+		p_2 = & \frac{V}{m_w + m_s} \\
+		p_3 = & \frac{k_1}{m_w + m_s} \\
+	\end{split}
+\end{equation}
+$\rightarrow$ three equations but 4 unknowns, thus not possible
 \subsubsection{Subtask 1d}
 \subsubsection{Subtask 1e}
 \subsubsection{Subtask 1f}
