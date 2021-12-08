@@ -14,6 +14,9 @@ matlab_yalmip/
 # matlab autosave
 *.asv
 
+# jupyter notebook checkpoints
+.ipynb_checkpoints/
+
 # latex and tex things
 *.aux
 *.log
