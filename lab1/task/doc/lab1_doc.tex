@@ -65,7 +65,7 @@ Than change the fourth equation of the mathematical model to get the form $\dot{
 \subsubsection{Subtask 1d}
 
 \subsection{Task 2}
-\subsubsection{Subtask 1a}
+\subsubsection{Subtask 2a}
 This is the 4th equation of the mathematical model:
 \begin{equation}
 	\dot{\omega} = \frac{1}{l\left(1-\frac{m_s}{m_w + m_s} \cos(\phi)^2\right)} \left[ g \sin(\phi) -  \frac{\cos(\phi)F}{m_w + m_s} - \frac{m_s}{m_w + m_s} {l \omega^2} \sin(\phi) \cos(\phi) \right]
@@ -91,8 +91,8 @@ The 3 additive functions with its constant prefactors are:
 	p_3 = \frac{k_1}{m_w + m_s} \text{ ; } f_3(\phi, v_w) = \cos(\phi) v_w
 \end{equation}
 
-\subsubsection{Subtask 1b}
-\subsubsection{Subtask 1c}
+\subsubsection{Subtask 2b}
+\subsubsection{Subtask 2c}
 \begin{equation}
 	\begin{split}
 		p_1 = & \frac{l m_s}{m_w + m_s} \\
@@ -108,9 +108,22 @@ $\rightarrow$ three equations but 4 unknowns, thus not possible. Therefore, we u
 		k_1 = & (m_w + m_s)p_3 \\
 	\end{split}
 \end{equation}
-\subsubsection{Subtask 1d}
-\subsubsection{Subtask 1e}
-\subsubsection{Subtask 1f}
+\subsubsection{Subtask 2d}
+
+When using the small pendulum instead of the large one little to nothing changes for the parameter identification. 
+
+The equation for $F$ in the system is simply replaced
+\begin{equation}
+	F = V i_A - k_1 v_w
+\end{equation}
+by the definition for the other force 
+\begin{equation}
+	F = \frac{k_M k_G}{r R_A} u - \frac{k_M^2 k_G^2}{r^2 R_A} v_w
+\end{equation}
+Both forces are calculated by multiplying the input ($u$ or $i_A$) and the velocity of the cart $v_W$ with a constant factor. In the second case, the factor consists of multiple physical constants that can than be abbreviated again by a constant. 
+
+\subsubsection{Subtask 2e}
+\subsubsection{Subtask 2f}
 
 \subsection{Task 3}
 
