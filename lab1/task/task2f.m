@@ -20,7 +20,7 @@ load('Linf_const.mat');
 %% L1: simulate
 % set inital state and model constants
 g = 9.81;
-l = 30;
+l = 0.3;
 m_s = 0.5;
 m_w = l1.m_w;
 k_1 = l1.k_1;
@@ -64,7 +64,7 @@ title('L1 \omega');
 %% L2: simulate
 % set inital state and model constants
 g = 9.81;
-l = 30;
+l = 0.3;
 m_s = 0.5;
 m_w = l2.m_w;
 k_1 = l2.k_1;
@@ -109,7 +109,7 @@ title('L2 \omega');
 %% Linf: simulate
 % set inital state and model constants
 g = 9.81;
-l = 30;
+l = 0.3;
 m_s = 0.5;
 m_w = linf.m_w;
 k_1 = linf.k_1;
