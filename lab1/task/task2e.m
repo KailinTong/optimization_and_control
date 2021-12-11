@@ -26,40 +26,40 @@ m_w = l1.m_w;
 k_1 = l1.k_1;
 V = l1.V;
 
-out = sim('task2e_model_2015');
+sim('task2e_model_2015b');
 
 figure(1);
 subplot(2,2,1);
-plot(t, x_w, "DisplayName", "data x_w");
+plot(t, x_w, 'DisplayName', 'data x_w');
 hold on;
-plot(out.x_sim.time, out.x_sim.signals.values(:,1), "DisplayName", "sim x_w");
-xlabel("time");
-ylabel("x_w");
-title("L1 x_w");
+plot(x_sim.time, x_sim.signals.values(:,1), 'DisplayName', 'sim x_w');
+xlabel('time');
+ylabel('x_w');
+title('L1 x_w');
 
 subplot(2,2,2);
-plot(t, phi, "DisplayName", "data \phi");
+plot(t, phi, 'DisplayName', 'data \phi');
 hold on;
-plot(out.x_sim.time, out.x_sim.signals.values(:,2), "DisplayName", "sim \phi");
-xlabel("time");
-ylabel("\phi");
-title("L1 \phi");
+plot(x_sim.time, x_sim.signals.values(:,2), 'DisplayName', 'sim \phi');
+xlabel('time');
+ylabel('\phi');
+title('L1 \phi');
 
 subplot(2,2,3);
-plot(t, v_w, "DisplayName", "data v_w");
+plot(t, v_w, 'DisplayName', 'data v_w');
 hold on;
-plot(out.x_sim.time, out.x_sim.signals.values(:,3), "DisplayName", "sim v_w");
-xlabel("time");
-ylabel("v_w");
-title("L1 v_w");
+plot(x_sim.time, x_sim.signals.values(:,3), 'DisplayName', 'sim v_w');
+xlabel('time');
+ylabel('v_w');
+title('L1 v_w');
 
 subplot(2,2,4);
-plot(t, omega, "DisplayName", "data \omega");
+plot(t, omega, 'DisplayName', 'data \omega');
 hold on;
-plot(out.x_sim.time, out.x_sim.signals.values(:,4), "DisplayName", "sim \omega");
-xlabel("time");
-ylabel("\omega");
-title("L1 \omega");
+plot(x_sim.time, x_sim.signals.values(:,4), 'DisplayName', 'sim \omega');
+xlabel('time');
+ylabel('\omega');
+title('L1 \omega');
 
 %% L2: simulate
 % set inital state and model constants
@@ -70,40 +70,40 @@ m_w = l2.m_w;
 k_1 = l2.k_1;
 V = l2.V;
 
-out = sim('task2e_model_2015');
+sim('task2e_model_2015b');
 
 figure(2);
 subplot(2,2,1);
-plot(t, x_w, "DisplayName", "data x_w");
+plot(t, x_w, 'DisplayName', 'data x_w');
 hold on;
-plot(out.x_sim.time, out.x_sim.signals.values(:,1), "DisplayName", "sim x_w");
-xlabel("time");
-ylabel("x_w");
-title("L2 x_w");
+plot(x_sim.time, x_sim.signals.values(:,1), 'DisplayName', 'sim x_w');
+xlabel('time');
+ylabel('x_w');
+title('L2 x_w');
 
 subplot(2,2,2);
-plot(t, phi, "DisplayName", "data \phi");
+plot(t, phi, 'DisplayName', 'data \phi');
 hold on;
-plot(out.x_sim.time, out.x_sim.signals.values(:,2), "DisplayName", "sim \phi");
-xlabel("time");
-ylabel("\phi");
-title("L2 \phi");
+plot(x_sim.time, x_sim.signals.values(:,2), 'DisplayName', 'sim \phi');
+xlabel('time');
+ylabel('\phi');
+title('L2 \phi');
 
 subplot(2,2,3);
-plot(t, v_w, "DisplayName", "data v_w");
+plot(t, v_w, 'DisplayName', 'data v_w');
 hold on;
-plot(out.x_sim.time, out.x_sim.signals.values(:,3), "DisplayName", "sim v_w");
-xlabel("time");
-ylabel("v_w");
-title("L2 v_w");
+plot(x_sim.time, x_sim.signals.values(:,3), 'DisplayName', 'sim v_w');
+xlabel('time');
+ylabel('v_w');
+title('L2 v_w');
 
 subplot(2,2,4);
-plot(t, omega, "DisplayName", "data \omega");
+plot(t, omega, 'DisplayName', 'data \omega');
 hold on;
-plot(out.x_sim.time, out.x_sim.signals.values(:,4), "DisplayName", "sim \omega");
-xlabel("time");
-ylabel("\omega");
-title("L2 \omega");
+plot(x_sim.time, x_sim.signals.values(:,4), 'DisplayName', 'sim \omega');
+xlabel('time');
+ylabel('\omega');
+title('L2 \omega');
 
 
 %% Linf: simulate
@@ -115,37 +115,37 @@ m_w = linf.m_w;
 k_1 = linf.k_1;
 V = linf.V;
 
-out = sim('task2e_model_2015');
+sim('task2e_model_2015b');
 
 figure(3)
 subplot(2,2,1);
-plot(t, x_w, "DisplayName", "data x_w");
+plot(t, x_w, 'DisplayName', 'data x_w');
 hold on;
-plot(out.x_sim.time, out.x_sim.signals.values(:,1), "DisplayName", "sim x_w");
-xlabel("time");
-ylabel("x_w");
-title("L infinity x_w");
+plot(x_sim.time, x_sim.signals.values(:,1), 'DisplayName', 'sim x_w');
+xlabel('time');
+ylabel('x_w');
+title('L infinity x_w');
 
 subplot(2,2,2);
-plot(t, phi, "DisplayName", "data \phi");
+plot(t, phi, 'DisplayName', 'data \phi');
 hold on;
-plot(out.x_sim.time, out.x_sim.signals.values(:,2), "DisplayName", "sim \phi");
-xlabel("time");
-ylabel("\phi");
-title("L infinity \phi");
+plot(x_sim.time, x_sim.signals.values(:,2), 'DisplayName', 'sim \phi');
+xlabel('time');
+ylabel('\phi');
+title('L infinity \phi');
 
 subplot(2,2,3);
-plot(t, v_w, "DisplayName", "data v_w");
+plot(t, v_w, 'DisplayName', 'data v_w');
 hold on;
-plot(out.x_sim.time, out.x_sim.signals.values(:,3), "DisplayName", "sim v_w");
-xlabel("time");
-ylabel("v_w");
-title("L infinity v_w");
+plot(x_sim.time, x_sim.signals.values(:,3), 'DisplayName', 'sim v_w');
+xlabel('time');
+ylabel('v_w');
+title('L infinity v_w');
 
 subplot(2,2,4);
-plot(t, omega, "DisplayName", "data \omega");
+plot(t, omega, 'DisplayName', 'data \omega');
 hold on;
-plot(out.x_sim.time, out.x_sim.signals.values(:,4), "DisplayName", "sim \omega");
-xlabel("time");
-ylabel("\omega");
-title("L infinity \omega");
+plot(x_sim.time, x_sim.signals.values(:,4), 'DisplayName', 'sim \omega');
+xlabel('time');
+ylabel('\omega');
+title('L infinity \omega');
