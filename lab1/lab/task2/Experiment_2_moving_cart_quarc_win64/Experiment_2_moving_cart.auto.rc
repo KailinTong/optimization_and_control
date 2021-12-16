@@ -1,0 +1,2 @@
+#include <winuser.rh>
+1 RT_MANIFEST "Experiment_2_moving_cart.auto.manifest"
