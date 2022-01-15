@@ -23,14 +23,23 @@ beta_2 = -3.246;
 global gamma_2; 
 gamma_2 = 3.610;
 
-xe1 = 4.35641; % 1.5563;
-xe2 = 4.47;
-ue1 = 1.02964; % 0.919261471399182;
-ue2 = 0; % 0.919261471399182;
+global xe2;
+xe2 = 25.53;
+global ue2;
+ue2 = 0; 
+global ue1;
+ue1 = ((k_2*sqrt(xe2) - alpha_1)^2 - beta_1)/gamma_1; 
+global xe1;
+xe1 = (k_2*sqrt(xe2)/k_1)^2;
+
+global Jx;
+Jx = [[(-k_1/(2*sqrt(xe1))), 0]; [(k_1/(2*sqrt(xe1))), (-k_2/(2*sqrt(xe2)))]];
+global Ju;
+Ju = [[(gamma_1/(2*sqrt(beta_1+gamma_1*ue1))), 0];[0, 0]];
 
 simin = [linspace(0,10,1000)', repmat([ue1],1,1000)', repmat([ue2],1,1000)'];
 
-sim('nonlinear_2_tank_model');
+sim('linear_2_tank_model');
 
 
 
