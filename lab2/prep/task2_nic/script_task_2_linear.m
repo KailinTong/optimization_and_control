@@ -24,13 +24,13 @@ global gamma_2;
 gamma_2 = 3.610;
 
 global xe2;
-xe2 = 25.53;
+xe2 = 24.844; % 25.53;
 global ue2;
 ue2 = 0; 
 global ue1;
-ue1 = ((k_2*sqrt(xe2) - alpha_1)^2 - beta_1)/gamma_1; 
+ue1 = 1.85; % ((k_2*sqrt(xe2) - alpha_1)^2 - beta_1)/gamma_1; 
 global xe1;
-xe1 = (k_2*sqrt(xe2)/k_1)^2;
+xe1 = 24.312; %(k_2*sqrt(xe2)/k_1)^2;
 
 global Jx;
 Jx = [[(-k_1/(2*sqrt(xe1))), 0]; [(k_1/(2*sqrt(xe1))), (-k_2/(2*sqrt(xe2)))]];
