@@ -1,4 +1,4 @@
-function dx = nonlinear_2_tank_model_function(input)
+function dx = nonlinear_2_tank_model_function_discrete(input)
 dx = [0;0;];
 
 u=input(1:2);
