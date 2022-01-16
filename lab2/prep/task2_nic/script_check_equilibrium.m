@@ -46,6 +46,7 @@ A = [[(-k_1/(2*sqrt(xe1))), 0]; [(k_1/(2*sqrt(xe1))), (-k_2/(2*sqrt(xe2)))]];
 B = [[(gamma_1/(2*sqrt(beta_1+gamma_1*ue1))), 0];[0, 0]];
 C = [0,1];
 D = [0,0];
+save('lin_ss_cont.mat','A','B','C','D')
 
 %% simulation
 time_end = 10;
