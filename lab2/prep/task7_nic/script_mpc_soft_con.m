@@ -27,15 +27,6 @@ gamma_2 = 3.610;
 global Td;
 Td = 0.5;
 
-global u_max;
-u_max = [5;5];
-global u_min;
-u_min = [0;0];
-global x_min;
-x_min = [h_01;h_02];
-global x_max;
-x_max = [20+h_01;20+h_02];
-
 %% equilibrium
 global ye;
 ye = 15;
@@ -51,6 +42,16 @@ global xe;
 xe = [xe1; xe2];
 global ue;
 ue = [ue1; ue2];
+
+%% constraints
+global u_max;
+u_max = [5;5];
+global u_min;
+u_min = [0;0];
+global x_min;
+x_min = [h_01;h_02]-xe;
+global x_max;
+x_max = [20+h_01;20+h_02]-xe;
 
 %% load models
 load('../task2_nic/lin_ss_cont.mat');

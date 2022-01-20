@@ -49,9 +49,9 @@ u_max = [5;5];
 global u_min;
 u_min = [0;0];
 global x_min;
-x_min = [h_01;h_02];
+x_min = [h_01;h_02]-xe;
 global x_max;
-x_max = [20+h_01;20+h_02];
+x_max = [20+h_01;20+h_02]-xe;
 
 %% load models
 load('../task2_nic/lin_ss_cont.mat');
@@ -94,8 +94,6 @@ u_min = repmat(u_min,Nc,1);
 u_max = repmat(u_max,Nc,1);
 x_min = repmat(x_min,Np,1);
 x_max = repmat(x_max,Np,1);
-
-
 
 %% simulation
 time_end = 150;

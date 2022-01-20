@@ -1,4 +1,4 @@
-function du = online_opt(input)
+function du = online_opt_soft_con(input)
 du = [0;0];
 %% get global vars
 p = 1; % number of outputs
