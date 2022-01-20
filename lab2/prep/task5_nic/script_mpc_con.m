@@ -49,11 +49,9 @@ u_max = [5;5];
 global u_min;
 u_min = [0;0];
 global x_min;
-x_min = [h_01;h_02]-xe;
+x_min = [h_01;h_02];
 global x_max;
-x_max = [20+h_01;20+h_02]-xe;
-global itcounter;
-itcounter = 0;
+x_max = [20+h_01;20+h_02];
 
 %% load models
 load('../task2_nic/lin_ss_cont.mat');

@@ -27,12 +27,15 @@ yalmip('clear')
 opt_var = sdpvar(m*Nc,1); 
 J = opt_var'*(Hy'*Qy*Hy + R)*opt_var + 2*opt_var'*Hy'*Qy*en;
 global L;
-global itcounter;
 % to compensate for weird startup behaviour
 % where first prediction can of the states can not be used
-w_bar = [L*un-u_min;u_max-L*un;gxn-x_min;x_max-gxn];
-constraints = [W*opt_var <= w_bar];
-itcounter = itcounter + 1;
+if all(gxn == 0)
+    disp('Warning: gxn=0 => unconstrained');
+    constraints = [];
+else
+    w_bar = [L*un-u_min;u_max-L*un;gxn-x_min;x_max-gxn];
+    constraints = [W*opt_var <= w_bar];
+end
 
 options = sdpsettings('verbose',0,'solver','qpoases','cachesolvers',1);
 opt_diag = optimize(constraints,J,options);
