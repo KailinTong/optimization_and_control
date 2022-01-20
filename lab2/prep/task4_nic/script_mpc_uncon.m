@@ -50,14 +50,14 @@ load('../task2_nic/lin_ss_cont.mat');
 load('../task3_nic/lin_ss_disc.mat');
 
 %% model predictive control 
-Np = 20;
-Nc = 10;
-Q = 5*eye(1*Np);
+Np = 10;
+Nc = 2;
+Q = 1*eye(1*Np);
 R = 1*eye(2*Nc);
 [F, G, H, K] = calc_mpc_mat(Ad, Bd, Cd, Np, Nc, Q, R);
 
 %% simulation
-time_end = 100;
+time_end = 150;
 r = [linspace(0,time_end*0.6,100*time_end*0.6)', repmat(repmat([ye],1,Np)',1,100*time_end*0.6)'];
 r = [r;[linspace(time_end*0.6,time_end,100*time_end*0.4)', repmat(repmat([0.5*ye],1,Np)',1,100*time_end*0.4)']];
 
