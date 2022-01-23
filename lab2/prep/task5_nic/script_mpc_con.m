@@ -45,9 +45,9 @@ ue = [ue1; ue2];
 
 %% constraints
 global u_max;
-u_max = [5;5];
+u_max = [5;5] - ue;
 global u_min;
-u_min = [0;0];
+u_min = [0;0] - ue;
 global x_min;
 x_min = [h_01;h_02]-xe;
 global x_max;
