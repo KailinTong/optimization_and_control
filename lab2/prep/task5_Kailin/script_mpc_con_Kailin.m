@@ -67,7 +67,7 @@ Qy = 1*eye(1*Np);
 global Qx;
 Qx = 1*eye(2*Np);
 global R;
-R = 1*eye(2*Nc);
+R = 100*eye(2*Nc);
 
 %% mpc matrices
 % calculate mpc for standard output y, C=[0,1]
